@@ -1,1 +1,1 @@
-<h1>Auction Project</h1>
+<h1>Auction Project - Frontend</h1>
