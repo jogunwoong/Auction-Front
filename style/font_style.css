@@ -1,0 +1,74 @@
+/* ======== font-size ======== */
+
+.font-size-10 {
+  font-size: 10px;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-15 {
+  font-size: 15px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.font-size-25 {
+  font-size: 25px;
+}
+
+.font-size-30 {
+  font-size: 30px;
+}
+
+/* ============================= */
+
+/* ======== font-weight ======== */
+
+.font-weight-regular {
+  font-weight: normal;
+}
+.font-weight-medium {
+  font-weight: medium;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.font-weight-extra-bold {
+  font-weight: 800;
+}
+
+/* ============================= */
+
+/* ======== font-weight ======== */
+
+.font-color-ffffff {
+  color: #000000;
+}
+
+.font-color-949494 {
+  color: #949494;
+}
+
+.font-color-949494 {
+  color: #949494;
+}
+
+.font-color-2c2c2c {
+  color: #2c2c2c;
+}
+
+.font-color-ffffff {
+  color: #ffffff;
+}
+
+/* ============================= */

@@ -1,0 +1,19 @@
+/* ======== border-style ======== */
+
+.border-solid {
+  border-style: sold;
+}
+
+/* ============================= */
+
+/* ======== border-width ======== */
+
+.border-width {
+  border-width: 2px;
+}
+
+.border-width {
+  border-width: 20px;
+}
+
+/* ============================= */
