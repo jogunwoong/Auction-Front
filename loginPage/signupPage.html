@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <style>
+        table {
+            text-align: center;
+            margin: auto;
+        }
+
+        .shortInput {
+            width: 210px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .input {
+            width: 326px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .blackBtn {
+            width: 95px;
+            height: 45px;
+            margin-left: 20px;
+            color: white;
+            background-color: black;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .text {
+            font-size: 15px;
+            /*글자들 오른쪽 정렬*/
+            text-align: right;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .authBtn {
+            height: 21px;
+            width: 153px;
+            border-radius: 10px;
+            background-color: white;
+            font-size: 12px;
+        }
+
+        #authBtn-left {
+            margin-right: 24px;
+        }
+
+        #signup-btn {
+            width: 100%;
+            height: 50px;
+            background-color: #ff6c6c;
+            color: white;
+            font-size: 15px;
+            border: none;
+            border-radius: 0px;
+        }
+
+        #input-container {
+
+            border-width: 1px;
+            width: 210px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .same-input {
+            width: 60px;
+            margin: 0;
+            border-radius: 0px;
+            font-size: 14px;
+            color: #909090;
+            height: 35px;
+            background-color: white;
+            border-color: black;
+
+        }
+
+        .auth-agree {
+            border: 1px solid black;
+            width: 326px;
+            height: 40px;
+            border-radius: 10px;
+            line-height: 40px;
+            text-align: left;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"]+label {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border: 1px solid #707070;
+            border-radius: 50%;
+            position: relative;
+            margin-top: 3px;
+            margin-bottom: 3px;
+
+        }
+
+        input[id="remember"]:checked+label::after {
+            content: '✔';
+            position: absolute;
+            font-size: 11px;
+            width: 0px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            line-height: 15px;
+            text-align: left;
+        }
+
+        #auth-check {
+            display: flex;
+            align-items: center;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="post" style="margin-top: 65px;">
+        <table border="1px" style="width: 626px;">
+            <tr>
+                <th style="width: 150px;"></th>
+                <th style="width: 326px;"><img src="../resource/Group 38.png" alt=""></th>
+                <td style="width: 150px;"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>회원가입</td>
+
+            </tr>
+            <tr>
+                <td class="right">
+                    <label for="" class="text">아이디</label>
+                </td>
+                <td>
+                    <input type="text" class="shortInput"><button class="blackBtn">중복체크</button>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="right"><label for="" class="text">비밀번호</label></td>
+                <td><input type="password" class="input"><br>
+                    <div style="font-size: 12px; text-align: left;">8 ~ 12자리의 비밀번호를 입력해주세요.</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="right"><label for="" class="text">비밀번호 확인</label></td>
+                <td><input type="password" class="input"><br>
+                    <div style="font-size: 12px; text-align: left; color: #ff0000;">동일한 비밀번호를 입력해주세요.</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="right"><label for="" class="text">이름</label></td>
+                <td><input type="text" class="input"></td>
+
+            </tr>
+            <tr>
+                <td class="right"><label for="" class="text">생년월일 8자리</label></td>
+                <td><input type="text" class="input"></td>
+
+            </tr>
+            <tr>
+                <td class="right"><label for="" class="text">배송지</label></td>
+                <td><input type="text" class="input"></td>
+            </tr>
+            <tr>
+                <td class="right"><label for="" class="text">이메일</label></td>
+                <td><input type="text" class="input"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button class="authBtn" id="authBtn-left">인증 번호 전송</button><button class="authBtn">재전송</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div id="input-container">
+                            <input type="text" id="input1" class="same-input" placeholder="인증 번호"
+                                style="border-right: none; width: 105px; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <input type="text" id="input2" class="same-input" placeholder="남은시간"
+                                style="border-left: none; width: 94px; text-align: right; padding-right:10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;"
+                                disabled>
+                        </div>
+                        <button class="blackBtn">인증</button>
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div id="auth-check">
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember"></label><text style="line-height: 100%;">인증 약관 동의</text>
+
+                        <div style="display: inline-block;"><span></span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="signup-btn">회원가입</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
