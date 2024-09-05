@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wuction Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+        .login-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .login-container h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #e74c3c;
+        }
+        .login-container h1 span {
+            color: black;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .login-container input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .login-container label {
+            color: #777;
+            font-size: 14px;
+        }
+        .login-container .error-message {
+            color: red;
+            font-size: 12px;
+            margin: 10px 0;
+        }
+        .login-container button {
+            background-color: #ff6666;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .login-container button:hover {
+            background-color: #ff4d4d;
+        }
+        .login-container .links {
+            margin-top: 20px;
+        }
+        .login-container .links a {
+            color: #999;
+            font-size: 12px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            padding: 10px 0;
+            background-color: #fff;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .footer a {
+            color: #999;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+        #check-btn[type="checkbox"]{
+            display: none;
+        }
+
+        #check-btn[type="checkbox"] + label{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border:1px solid #707070;
+            border-radius: 50%;
+            position: relative;
+            margin-top: 10px;
+        }
+        
+        #check-btn[id="remember"]:checked + label::after{
+            content:'✔';
+            font-size: 11px;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            border-radius: 50%;
+            background-color: #ffffff;
+            line-height: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1><span>W</span>uction</h1>
+        <form>
+            <input type="text" placeholder="아이디" value="testUser">
+            <input type="password" placeholder="비밀번호" value="********">
+            <div>
+
+            </div>
+            <div class="error-message">계정 정보가 없습니다.</div>
+            <button type="submit">로그인</button>
+        </form>
+        <div class="links">
+            <a href="#">아이디 찾기</a>
+            <a href="#">비밀번호 찾기</a>
+            <a href="#">회원가입</a>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="#">이용약관</a> |
+        <a href="#">개인정보처리방침</a> |
+        <a href="#">채용정보</a> |
+        <a href="#">전자금융거래약관</a><br>
+        copyright Wuction. All rights reserved.<br>
+        대표 부팅: 조경렬 &nbsp;&nbsp; 경남 진주시 반하사랑 30 &nbsp;&nbsp; tel: 010-1234-5678
+    </div>
+</body>
+</html>
