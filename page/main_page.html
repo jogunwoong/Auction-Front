@@ -18,6 +18,7 @@
             192px,
             896px
           );
+
         width: 100%;
         height: 100%;
       }
@@ -32,7 +33,7 @@
       }
 
       .logo {
-        background-image: url("../resource/Group\ 38.png");
+        background-image: url("../resource/Group38.png");
         width: 100vw;
         height: 80%;
         border: 0px;
@@ -48,10 +49,13 @@
         grid-template-rows: 1fr 1fr;
         grid-column-gap: 20px;
         border-bottom: solid 1px #cecece;
+        position: sticky;
+        top: 0px; /* 도달했을때 고정시킬 위치 */
+        z-index: 10;
+        background-color: white;
       }
 
       footer {
-        background-color: red;
         display: grid;
         grid-template-rows: 3fr 4.5fr 2.5fr;
       }
@@ -59,6 +63,67 @@
       #searchInput {
         width: 100%;
         height: 35%;
+      }
+      .slider-container {
+        flex: 5;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .slides {
+        display: flex;
+        height: 100%;
+        transition: transform 0.5s ease-in-out;
+        background-color: #e1ff00;
+      }
+
+      .slide {
+        min-width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        color: #2c2c2c;
+        font-size: 15px;
+        font-weight: bold;
+        border: 2px solid #e5e5e5;
+        box-sizing: border-box;
+      }
+
+      .slide > div {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .slide-description {
+        text-align: center;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #ffffff00;
+        color: rgb(146, 146, 146);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .prev {
+        left: 0.5%;
+        font-size: x-large;
+      }
+
+      .next {
+        right: 0.5%;
+        font-size: x-large;
       }
     </style>
   </head>
@@ -165,18 +230,315 @@
             </button>
           </div>
         </header>
-        <main style="background-color: rgb(137, 249, 158)"></main>
-        <footer>
-          <div style="background-color: yellow">푸터 : 네비게이션 영역</div>
-          <div style="background-color: rgb(255, 0, 255)">
-            푸터 : 경고문 영역
+        <main>
+          <div style="height: 336px; display: flex; flex-direction: column">
+            <div
+              style="
+                flex: 2;
+                font-weight: bold;
+                display: flex;
+                align-items: flex-end;
+              "
+            >
+              인기
+              <text
+                style="
+                  background: linear-gradient(to right top, #ff0101, #e1ff00);
+                  color: transparent;
+                  -webkit-background-clip: text;
+                  font-size: 30px;
+                "
+                ><b>대폭발</b></text
+              >
+              상품 모음!!!!
+            </div>
+            <div class="slider-container">
+              <div class="slides" id="slides">
+                <div class="slide">
+                  <div style="flex: 1"></div>
+                  <div style="flex: 12; display: flex">
+                    <div style="flex: 1">
+                      <img
+                        src="../resource/8억인치_TV.png"
+                        alt="TV"
+                        style="width: 100%; height: 100%"
+                      />
+                    </div>
+                    <div style="flex: 1">
+                      <table style="width: 100%; height: 100%">
+                        <tr>
+                          <td colspan="2">엄청 비싼 TV</td>
+                        </tr>
+                        <tr>
+                          <td>현재가</td>
+                          <td>100,000,000원</td>
+                        </tr>
+                        <tr>
+                          <td>입찰자</td>
+                          <td>2,201,507명</td>
+                        </tr>
+                        <tr>
+                          <td>경매기간</td>
+                          <td>2024-08-22 23:00</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      flex: 12;
+
+                      display: flex;
+                    "
+                  >
+                    <div style="flex: 1">
+                      <img
+                        src="../resource/903069ba-ab95-4ba2-bf02-9f61b1dc0e86.png"
+                        alt="세상에서가장비싼운동화"
+                        style="width: 100%; height: 100%"
+                      />
+                    </div>
+                    <div style="flex: 1">
+                      <table style="width: 100%; height: 100%">
+                        <tr>
+                          <td colspan="2">엄청 비싼 TV</td>
+                        </tr>
+                        <tr>
+                          <td>현재가</td>
+                          <td>100,000,000원</td>
+                        </tr>
+                        <tr>
+                          <td>입찰자</td>
+                          <td>2,201,507명</td>
+                        </tr>
+                        <tr>
+                          <td>경매기간</td>
+                          <td>2024-08-22 23:00</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <div style="flex: 1"></div>
+                </div>
+                <div class="slide">
+                  <div style="flex: 1"></div>
+                  <div style="flex: 12; display: flex">
+                    <div style="flex: 1">
+                      <img
+                        src="../resource/fndlql.png"
+                        alt="샤넬브메랑"
+                        style="width: 100%; height: 100%"
+                      />
+                    </div>
+                    <div style="flex: 1">
+                      <table style="width: 100%; height: 100%">
+                        <tr>
+                          <td colspan="2">엄청 비싼 TV</td>
+                        </tr>
+                        <tr>
+                          <td>현재가</td>
+                          <td>100,000,000원</td>
+                        </tr>
+                        <tr>
+                          <td>입찰자</td>
+                          <td>2,201,507명</td>
+                        </tr>
+                        <tr>
+                          <td>경매기간</td>
+                          <td>2024-08-22 23:00</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      flex: 12;
+
+                      display: flex;
+                    "
+                  >
+                    <div style="flex: 1">
+                      <img
+                        src="../resource/l_2017052201003110600249914.png"
+                        alt="비트코인"
+                        style="width: 100%; height: 100%"
+                      />
+                    </div>
+                    <div style="flex: 1">
+                      <table style="width: 100%; height: 100%">
+                        <tr>
+                          <td colspan="2">엄청 비싼 TV</td>
+                        </tr>
+                        <tr>
+                          <td>현재가</td>
+                          <td>100,000,000원</td>
+                        </tr>
+                        <tr>
+                          <td>입찰자</td>
+                          <td>2,201,507명</td>
+                        </tr>
+                        <tr>
+                          <td>경매기간</td>
+                          <td>2024-08-22 23:00</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <div style="flex: 1"></div>
+                </div>
+                <div class="slide">
+                  <div style="flex: 1"></div>
+                  <div style="flex: 12; display: flex">
+                    <div style="flex: 1">
+                      <img
+                        src="../resource/다운로드.png"
+                        alt="슈프림벽돌"
+                        style="width: 100%; height: 100%"
+                      />
+                    </div>
+                    <div style="flex: 1">
+                      <table style="width: 100%; height: 100%">
+                        <tr>
+                          <td colspan="2">엄청 비싼 TV</td>
+                        </tr>
+                        <tr>
+                          <td>현재가</td>
+                          <td>100,000,000원</td>
+                        </tr>
+                        <tr>
+                          <td>입찰자</td>
+                          <td>2,201,507명</td>
+                        </tr>
+                        <tr>
+                          <td>경매기간</td>
+                          <td>2024-08-22 23:00</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      flex: 12;
+
+                      display: flex;
+                    "
+                  >
+                    <div style="flex: 1">
+                      <img
+                        src="../resource/다이아_박힌_헬로키티.png"
+                        alt="헬로키티"
+                        style="width: 100%; height: 100%"
+                      />
+                    </div>
+                    <div style="flex: 1">
+                      <table style="width: 100%; height: 100%">
+                        <tr>
+                          <td colspan="2">엄청 비싼 TV</td>
+                        </tr>
+                        <tr>
+                          <td>현재가</td>
+                          <td>100,000,000원</td>
+                        </tr>
+                        <tr>
+                          <td>입찰자</td>
+                          <td>2,201,507명</td>
+                        </tr>
+                        <tr>
+                          <td>경매기간</td>
+                          <td>2024-08-22 23:00</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <div style="flex: 1"></div>
+                </div>
+              </div>
+              <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+              <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
           </div>
-          <div style="background-color: rgb(187, 84, 251)">
-            푸터 : 부가 정보 영역
+        </main>
+        <footer>
+          <div
+            style="
+              padding-left: 1%;
+              padding-top: 1%;
+              border-top: solid 1px #c9c9c9c9;
+            "
+          >
+            <a
+              href="#"
+              style="text-decoration: none; font-size: 13px; color: #5c5c5c"
+              >이용약관</a
+            >
+            <text style="color: #5c5c5c; font-size: 13px"
+              >&nbsp;&nbsp;|&nbsp;&nbsp;</text
+            >
+            <a
+              href="#"
+              style="text-decoration: none; font-size: 13px; color: #5c5c5c"
+              >개인정보방침</a
+            >
+            <text style="color: #5c5c5c; font-size: 13px"
+              >&nbsp;&nbsp;|&nbsp;&nbsp;</text
+            >
+            <a
+              href="#"
+              style="text-decoration: none; font-size: 13px; color: #5c5c5c"
+              >채용정보</a
+            >
+            <text style="color: #5c5c5c; font-size: 13px"
+              >&nbsp;&nbsp;|&nbsp;&nbsp;</text
+            >
+            <a
+              href="#"
+              style="text-decoration: none; font-size: 13px; color: #5c5c5c"
+              >전자금융거래약관</a
+            >
+          </div>
+          <div
+            style="
+              color: #5c5c5c;
+              font-size: 13px;
+              font-weight: normal;
+              padding-left: 1%;
+            "
+          >
+            <p>
+              Wuction은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서
+              Wcution은 상품거래 및 가격에 대하여 책임을 지지 않습니다. <br />
+              본 사이트의 모든 정보, 컨텐츠, UI등에 대한 무단 복제, 전송, 배포,
+              스크래핑 등의 행위는 엄격히 금지됩니다.
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; padding-left: 1%">
+            <div style="color: #5c5c5c; font-size: 10px; flex: 1">
+              copyright Wuction. All rights served.
+            </div>
+            <div style="color: #5c5c5c; font-size: 10px; flex: 1">
+              모든 책임자 : 조건웅
+            </div>
+            <div style="color: #5c5c5c; font-size: 10px; flex: 1">
+              강원 춘천시 번개시장길 30
+            </div>
+            <div style="color: #5c5c5c; font-size: 10px; flex: 1">
+              tel : 010-1234-5678
+            </div>
           </div>
         </footer>
       </div>
       <div>우측 빈 공간</div>
     </div>
+
+    <script>
+      let currentSlide = 0;
+
+      function moveSlide(step) {
+        const slides = document.getElementById("slides");
+        const totalSlides = slides.children.length;
+        currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+        slides.style.transform = "translateX(-" + currentSlide * 100 + "%)";
+      }
+    </script>
   </body>
 </html>
