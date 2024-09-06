@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,7 +87,7 @@
         }
 
         .info-div > table {
-          height: 557px; width: ;
+          height: 557px; width: 100%;
         }
 
         /* 모달 배경 */
@@ -281,7 +282,7 @@
                 <div class="info-div">
                     <table>
                         <tr>
-                            <td colspan="2" style="">먼작귀</td>
+                            <td colspan="2">먼작귀</td>
                         </tr>
                         <tr>
                             <td style="font-weight: 600; color:#878787;">시작가</td>
@@ -399,7 +400,7 @@
         
           </main>
           <!-- 푸터 추가 -->
-            <%@ include file="footer.jsp" %>
+          <%@ include file="footer.jsp" %>
           
         </div>
         <div>우측 빈 공간</div>
