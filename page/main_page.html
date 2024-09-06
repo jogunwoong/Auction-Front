@@ -55,6 +55,12 @@
         background-color: white;
       }
 
+      main {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+         grid-column-gap: 20px;
+      }
+
       footer {
         display: grid;
         grid-template-rows: 3fr 4.5fr 2.5fr;
@@ -231,7 +237,7 @@
           </div>
         </header>
         <main>
-          <div style="height: 336px; display: flex; flex-direction: column">
+          <div style="height: 336px; display: flex; flex-direction: column; grid-column: 1 / span 12;">
             <div
               style="
                 flex: 2;
@@ -559,10 +565,263 @@
               <button class="next" onclick="moveSlide(1)">&#10095;</button>
             </div>
           </div>
-
-          <br /><br />
-
-          현재상품
+          <div style="grid-column: 1 / span 12; height: 150px; font-size: 25px; color: #2C2C2C; font-weight: normal; display: flex; align-items: flex-end;">현재 상품</div>
+          <div style="height: 45px"></div>
+          <button style="grid-column: 1 / span 3; height: 316px; display: block; border: 0; cursor: pointer; padding: 0; margin: 0; background-color: white; margin-bottom: 5%;">
+              <div style="width: 100%; height: 55%; background-image: url('../resource/뉴발란스327_43만원.png'); background-size: cover; background-position: center;"></div>
+              <div style="width: 100%; height: 45%; border-bottom: 2px solid #FFCCCC; border-left: 2px solid #FFCCCC; border-right: 2px solid #FFCCCC; box-sizing: border-box;">
+                <table style="width: 100%; height: 100%">
+                  <tr>
+                    <td colspan="2" style="text-align: left; font-size: 15px">뉴발란스 327</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">현재가</td>
+                    <td style="text-align: right; font-size: 12px; font-weight: 900">430,000원</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494;  font-size: 12px">입찰자수</td>
+                    <td style="text-align: right; font-size: 12px">15명</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">경매기간</td>
+                    <td style="text-align: right; font-size: 12px">2024-12-30</td>
+                  </tr>
+                </table>
+              </div>
+            </button>
+            <button style="grid-column: 4 / span 3; height: 316px; display: block; border: 0; cursor: pointer; padding: 0; margin: 0; background-color: white; margin-bottom: 5%;">
+              <div style="width: 100%; height: 55%; background-image: url('../resource/위아이스txt와차_500만원.png'); background-size: cover; background-position: center;"></div>
+              <div style="width: 100%; height: 45%; border-bottom: 2px solid #FFCCCC; border-left: 2px solid #FFCCCC; border-right: 2px solid #FFCCCC; box-sizing: border-box;">
+                <table style="width: 100%; height: 100%">
+                  <tr>
+                    <td colspan="2" style="text-align: left; font-size: 15px">9천리 자전거</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">현재가</td>
+                    <td style="text-align: right; font-size: 12px; font-weight: 900">5,000,000원</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494;  font-size: 12px">입찰자수</td>
+                    <td style="text-align: right; font-size: 12px">5명</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">경매기간</td>
+                    <td style="text-align: right; font-size: 12px">2024-11-29</td>
+                  </tr>
+                </table>
+              </div>
+            </button>          <button style="grid-column: 7 / span 3; height: 316px; display: block; border: 0; cursor: pointer; padding: 0; margin: 0; background-color: white; margin-bottom: 5%;">
+              <div style="width: 100%; height: 55%; background-image: url('../resource/조건웅실착셔츠_59만.png'); background-size: cover; background-position: center;"></div>
+              <div style="width: 100%; height: 45%; border-bottom: 2px solid #FFCCCC; border-left: 2px solid #FFCCCC; border-right: 2px solid #FFCCCC; box-sizing: border-box;">
+                <table style="width: 100%; height: 100%">
+                  <tr>
+                    <td colspan="2" style="text-align: left; font-size: 15px">조건웅 실착 셔츠</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">현재가</td>
+                    <td style="text-align: right; font-size: 12px; font-weight: 900">590,000원</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494;  font-size: 12px">입찰자수</td>
+                    <td style="text-align: right; font-size: 12px">14명</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">경매기간</td>
+                    <td style="text-align: right; font-size: 12px">2024-10-28</td>
+                  </tr>
+                </table>
+              </div>
+            </button>          <button style="grid-column: 10 / span 3; height: 316px; display: block; border: 0; cursor: pointer; padding: 0; margin: 0; background-color: white; margin-bottom: 5%;">
+              <div style="width: 100%; height: 55%; background-image: url('../resource/제네시스DH_1천7백만.png'); background-size: cover; background-position: center;"></div>
+              <div style="width: 100%; height: 45%; border-bottom: 2px solid #FFCCCC; border-left: 2px solid #FFCCCC; border-right: 2px solid #FFCCCC; box-sizing: border-box;">
+                <table style="width: 100%; height: 100%">
+                  <tr>
+                    <td colspan="2" style="text-align: left; font-size: 15px">제네시스 DH</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">현재가</td>
+                    <td style="text-align: right; font-size: 12px; font-weight: 900">17,000,000원</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494;  font-size: 12px">입찰자수</td>
+                    <td style="text-align: right; font-size: 12px">4명</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">경매기간</td>
+                    <td style="text-align: right; font-size: 12px">2024-09-27</td>
+                  </tr>
+                </table>
+              </div>
+            </button>          <button style="grid-column: 1 / span 3; height: 316px; display: block; border: 0; cursor: pointer; padding: 0; margin: 0; background-color: white; margin-bottom: 5%;">
+              <div style="width: 100%; height: 55%; background-image: url('../resource/타이틀리스트_62만원.png'); background-size: cover; background-position: center;"></div>
+              <div style="width: 100%; height: 45%; border-bottom: 2px solid #FFCCCC; border-left: 2px solid #FFCCCC; border-right: 2px solid #FFCCCC; box-sizing: border-box;">
+                <table style="width: 100%; height: 100%">
+                  <tr>
+                    <td colspan="2" style="text-align: left; font-size: 15px">타이틀리스트</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">현재가</td>
+                    <td style="text-align: right; font-size: 12px; font-weight: 900">620,000원</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494;  font-size: 12px">입찰자수</td>
+                    <td style="text-align: right; font-size: 12px">13명</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">경매기간</td>
+                    <td style="text-align: right; font-size: 12px">2024-08-26</td>
+                  </tr>
+                </table>
+              </div>
+            </button>          <button style="grid-column: 4 / span 3; height: 316px; display: block; border: 0; cursor: pointer; padding: 0; margin: 0; background-color: white; margin-bottom: 5%;">
+              <div style="width: 100%; height: 55%; background-image: url('../resource/Cp컴퍼니패딩_62만원.png'); background-size: cover; background-position: center;"></div>
+              <div style="width: 100%; height: 45%; border-bottom: 2px solid #FFCCCC; border-left: 2px solid #FFCCCC; border-right: 2px solid #FFCCCC; box-sizing: border-box;">
+                <table style="width: 100%; height: 100%">
+                  <tr>
+                    <td colspan="2" style="text-align: left; font-size: 15px">뉴발란스 327</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">현재가</td>
+                    <td style="text-align: right; font-size: 12px; font-weight: 900">620,000원</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494;  font-size: 12px">입찰자수</td>
+                    <td style="text-align: right; font-size: 12px">3명</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">경매기간</td>
+                    <td style="text-align: right; font-size: 12px">2024-07-25</td>
+                  </tr>
+                </table>
+              </div>
+            </button>          <button style="grid-column: 7 / span 3; height: 316px; display: block; border: 0; cursor: pointer; padding: 0; margin: 0; background-color: white; margin-bottom: 5%;">
+              <div style="width: 100%; height: 55%; background-image: url('../resource/소니a6400_110만원.png'); background-size: cover; background-position: center;"></div>
+              <div style="width: 100%; height: 45%; border-bottom: 2px solid #FFCCCC; border-left: 2px solid #FFCCCC; border-right: 2px solid #FFCCCC; box-sizing: border-box;">
+                <table style="width: 100%; height: 100%">
+                  <tr>
+                    <td colspan="2" style="text-align: left; font-size: 15px">소니 a6400</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">현재가</td>
+                    <td style="text-align: right; font-size: 12px; font-weight: 900">1,100,000원</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494;  font-size: 12px">입찰자수</td>
+                    <td style="text-align: right; font-size: 12px">22명</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">경매기간</td>
+                    <td style="text-align: right; font-size: 12px">2024-06-24</td>
+                  </tr>
+                </table>
+              </div>
+            </button>          <button style="grid-column: 10 / span 3; height: 316px; display: block; border: 0; cursor: pointer; padding: 0; margin: 0; background-color: white; margin-bottom: 5%;">
+              <div style="width: 100%; height: 55%; background-image: url('../resource/원피스피규어모음_100만원.png'); background-size: cover; background-position: center;"></div>
+              <div style="width: 100%; height: 45%; border-bottom: 2px solid #FFCCCC; border-left: 2px solid #FFCCCC; border-right: 2px solid #FFCCCC; box-sizing: border-box;">
+                <table style="width: 100%; height: 100%">
+                  <tr>
+                    <td colspan="2" style="text-align: left; font-size: 15px">원피스 피규어 모음</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">현재가</td>
+                    <td style="text-align: right; font-size: 12px; font-weight: 900">1,000,000원</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494;  font-size: 12px">입찰자수</td>
+                    <td style="text-align: right; font-size: 12px">11명</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">경매기간</td>
+                    <td style="text-align: right; font-size: 12px">2024-05-23</td>
+                  </tr>
+                </table>
+              </div>
+            </button>          <button style="grid-column: 1 / span 3; height: 316px; display: block; border: 0; cursor: pointer; padding: 0; margin: 0; background-color: white; margin-bottom: 5%;">
+              <div style="width: 100%; height: 55%; background-image: url('../resource/일레트릭기타_25만원.PNG'); background-size: cover; background-position: center;"></div>
+              <div style="width: 100%; height: 45%; border-bottom: 2px solid #FFCCCC; border-left: 2px solid #FFCCCC; border-right: 2px solid #FFCCCC; box-sizing: border-box;">
+                <table style="width: 100%; height: 100%">
+                  <tr>
+                    <td colspan="2" style="text-align: left; font-size: 15px">스콰이어 일렉기타</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">현재가</td>
+                    <td style="text-align: right; font-size: 12px; font-weight: 900">250,000원</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494;  font-size: 12px">입찰자수</td>
+                    <td style="text-align: right; font-size: 12px">25명</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">경매기간</td>
+                    <td style="text-align: right; font-size: 12px">2024-04-22</td>
+                  </tr>
+                </table>
+              </div>
+            </button>          <button style="grid-column: 4 / span 3; height: 316px; display: block; border: 0; cursor: pointer; padding: 0; margin: 0; background-color: white; margin-bottom: 5%;">
+              <div style="width: 100%; height: 55%; background-image: url('../resource/디올빈티지펜던트_50만원.png'); background-size: cover; background-position: center;"></div>
+              <div style="width: 100%; height: 45%; border-bottom: 2px solid #FFCCCC; border-left: 2px solid #FFCCCC; border-right: 2px solid #FFCCCC; box-sizing: border-box;">
+                <table style="width: 100%; height: 100%">
+                  <tr>
+                    <td colspan="2" style="text-align: left; font-size: 15px">디올 빈티지 펜던트</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">현재가</td>
+                    <td style="text-align: right; font-size: 12px; font-weight: 900">500,000원</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494;  font-size: 12px">입찰자수</td>
+                    <td style="text-align: right; font-size: 12px">23명</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">경매기간</td>
+                    <td style="text-align: right; font-size: 12px">2024-03-21</td>
+                  </tr>
+                </table>
+              </div>
+            </button>          <button style="grid-column: 7 / span 3; height: 316px; display: block; border: 0; cursor: pointer; padding: 0; margin: 0; background-color: white; margin-bottom: 5%;">
+              <div style="width: 100%; height: 55%; background-image: url('../resource/엔틱빈티지가구_68만원.png'); background-size: cover; background-position: center;"></div>
+              <div style="width: 100%; height: 45%; border-bottom: 2px solid #FFCCCC; border-left: 2px solid #FFCCCC; border-right: 2px solid #FFCCCC; box-sizing: border-box;">
+                <table style="width: 100%; height: 100%">
+                  <tr>
+                    <td colspan="2" style="text-align: left; font-size: 15px">엔틱 빈티지 가구</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">현재가</td>
+                    <td style="text-align: right; font-size: 12px; font-weight: 900">570,000원</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494;  font-size: 12px">입찰자수</td>
+                    <td style="text-align: right; font-size: 12px">1명</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">경매기간</td>
+                    <td style="text-align: right; font-size: 12px">2024-02-20</td>
+                  </tr>
+                </table>
+              </div>
+            </button>          <button style="grid-column: 10 / span 3; height: 316px; display: block; border: 0; cursor: pointer; padding: 0; margin: 0; background-color: white; margin-bottom: 5%;">
+              <div style="width: 100%; height: 55%; background-image: url('../resource/불가비골든링_100만원.png'); background-size: cover; background-position: center;"></div>
+              <div style="width: 100%; height: 45%; border-bottom: 2px solid #FFCCCC; border-left: 2px solid #FFCCCC; border-right: 2px solid #FFCCCC; box-sizing: border-box;">
+                <table style="width: 100%; height: 100%">
+                  <tr>
+                    <td colspan="2" style="text-align: left; font-size: 15px">불가비 골든링</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">현재가</td>
+                    <td style="text-align: right; font-size: 12px; font-weight: 900">1,000,000원</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494;  font-size: 12px">입찰자수</td>
+                    <td style="text-align: right; font-size: 12px">29명</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; color: #949494; font-size: 12px">경매기간</td>
+                    <td style="text-align: right; font-size: 12px">2024-01-19</td>
+                  </tr>
+                </table>
+              </div>
+            </button>
+            
         </main>
         <footer>
           <div
