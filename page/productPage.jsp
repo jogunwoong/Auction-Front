@@ -171,6 +171,11 @@
           width: 173px; height: 55px; background-color: #EEEEEE;
         }
 
+        .product_modal_input {
+            border:none;
+            font-size: 16px;
+        }
+
         .modal-body table, .modal-body th, .modal-body td {
             border: 1px solid #ddd;
             padding: 8px;
@@ -326,19 +331,19 @@
                           <table>
                               <tr>
                                   <td>상품명</td>
-                                  <td>먼작귀</td>
+                                  <td><input class="product_modal_input" type="text" value="먼작귀" readonly></td>
                               </tr>
                               <tr>
                                   <td>현재가</td>
-                                  <td>5,000,000원</td>
+                                  <td><input class="product_modal_input" type="text" value="5,000,000원" readonly></td>
                               </tr>
                               <tr>
                                   <td>입찰 금액</td>
-                                  <td>5,100,000원</td>
+                                  <td><input class="product_modal_input" type="text" value="5,100,000원" readonly></td>
                               </tr>
                               <tr>
                                   <td>경매마감일자</td>
-                                  <td>24-08-29 18:00</td>
+                                  <td><input class="product_modal_input" type="text" value="24-08-29 18:00" readonly></td>
                               </tr>
                           </table>
                           <ul>
