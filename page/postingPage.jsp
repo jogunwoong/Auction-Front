@@ -144,25 +144,25 @@
               <tr>
                 <td style="padding-top: 20px">제품명</td>
                 <td style="padding-top: 20px">
-                  <input type="text" name="" id="" style="height:40px; width: 100%; box-sizing: border-box;"/>
+                  <input type="text" name="" id="" style="font-size: 18px; height:40px; width: 100%; box-sizing: border-box;"/>
                 </td>
               </tr>
               <tr>
                 <td style="padding-top: 40px">제품 설명</td>
                 <td style="padding-top: 40px">
-                  <textarea name="" id="" cols="30" rows="10" style="box-sizing: border-box; width: 100%;"></textarea>
+                  <textarea name="" id="" cols="30" rows="10" style="font-size: 18px; box-sizing: border-box; width: 100%; resize: none;"></textarea>
                 </td>
               </tr>
               <tr>
                 <td style="padding-top: 40px">시작가</td>
                 <td style="padding-top: 40px">
-                  <input type="number" name="" id="" style="box-sizing: border-box; width: 100%; height: 40px;"/>
+                  <input type="number" name="" id="" style="box-sizing: border-box; width: 100%; height: 40px; font-size: 18px;"/>
                 </td>
               </tr>
               <tr>
                 <td style="padding-top: 40px">카테고리</td>
                 <td style="padding-top: 40px">
-                  <select name="category" id="" style="width:280px; height:40px;">
+                  <select name="category" id="" style="width:280px; height:40px; font-size: 18px;">
                     <option value="clothes">의류</option>
                     <option value="electronic">전자제품</option>
                     <option value="etc">기타 제품</option>
@@ -172,7 +172,7 @@
               <tr>
                 <td style="padding-top: 40px">마감시간</td>
                 <td style="padding-top: 40px">
-                  <input type="datetime-local" name="" id="" style="width:280px; height:40px;" />
+                  <input type="datetime-local" name="" id="" style="width:280px; height:40px; font-size: 18px;" />
                 </td>
               </tr>
             </table>
@@ -188,31 +188,23 @@
   </body>
   <script>
     function loadFile(file, container) {
-      const newImage = document.createElement("img"); // 새 이미지 태그 생성
-
-      // 이미지 source 가져오기
+      const newImage = document.createElement("img");
       newImage.src = URL.createObjectURL(file);
-      newImage.style.width = "100%"; // div에 꽉차게 넣으려고
+      newImage.style.width = "100%";
       newImage.style.height = "100%";
-      newImage.style.objectFit = "cover"; // div에 넘치지 않고 들어가게
-
-      // 이미지를 container div에 추가
-      container.innerHTML = ''; // 기존 이미지 제거
+      newImage.style.objectFit = "cover";
+      container.innerHTML = '';
       container.appendChild(newImage);
     }
 
     function getImageFiles(e) {
-      const files = e.target.files;
-      const container = e.target.nextElementSibling; // input 요소 바로 다음의 div 요소
-
-      // 파일 타입 검사
-      [...files].forEach((file) => {
-        if (!file.type.match("image/.*")) {
-          alert("이미지 파일만 업로드가 가능합니다.");
-          return;
-        }
+      const file = e.target.files[0];
+      const container = e.target.nextElementSibling;
+      if (file && file.type.match("image/.*")) {
         loadFile(file, container);
-      });
+      } else {
+        alert("이미지 파일만 업로드가 가능합니다.");
+      }
     }
 
     document.querySelectorAll('.hidden-upload').forEach(input => {
@@ -221,7 +213,7 @@
 
     document.querySelectorAll('.upload').forEach(upload => {
       upload.addEventListener('click', () => {
-        upload.previousElementSibling.click(); // div 요소 바로 이전의 input 요소 클릭
+        upload.previousElementSibling.click();
       });
     });
   </script>
